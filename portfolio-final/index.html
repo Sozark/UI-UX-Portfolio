@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,6 +12,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garant:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400;500&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <style>
+
 /* ── Page system ── */
 .page { display:none; min-height:100vh; position:relative; z-index:1; }
 .page.active { display:block; animation:fadeIn 0.3s ease; }
@@ -36,6 +38,7 @@
   color:var(--blue-dim); text-transform:uppercase; margin-bottom:24px;
   display:flex; align-items:center; gap:12px;
 }
+
 .hero__eyebrow::before,.hero__eyebrow::after { content:''; width:32px; height:1px; background:var(--blue-dim); }
 .hero__name { font-family:var(--serif); font-size:clamp(3rem,7vw,5.5rem); font-weight:300; letter-spacing:-0.01em; line-height:1.0; color:var(--text); margin-bottom:16px; }
 .hero__role { font-family:var(--mono); font-size:0.88rem; color:var(--blue); letter-spacing:0.1em; margin-bottom:24px; text-shadow:0 0 20px rgba(99,140,255,0.35); }
@@ -86,14 +89,17 @@
 <!-- ══ NAVBAR ══ -->
 <nav class="navbar">
   <div class="nav-logo" onclick="navigate('home')">Noah C. Jones</div>
+  
   <ul class="nav-links">
     <li><a href="#" onclick="navigate('projects');return false;" id="nav-projects">Projects</a></li>
     <li><a href="#" onclick="navigate('github');return false;" id="nav-github">GitHub</a></li>
     <li><a href="#" onclick="navigate('about');return false;" id="nav-about">About</a></li>
     <li><a href="#" onclick="navigate('contact');return false;" id="nav-contact">Contact</a></li>
   </ul>
+
   <button class="hamburger" onclick="toggleMobile()" aria-label="Menu"><i class="fa-solid fa-bars"></i></button>
 </nav>
+
 <div class="mobile-menu" id="mobileMenu">
   <a href="#" onclick="navigate('projects');toggleMobile();return false;">Projects</a>
   <a href="#" onclick="navigate('github');toggleMobile();return false;">GitHub</a>
@@ -110,48 +116,59 @@
     <h1 class="hero__name">Noah C. Jones</h1>
     <p class="hero__role">Designer · Engineer · Creator</p>
     <p class="hero__bio">I design and build user-centered digital experiences — from concept and research through to shipped product. Focused on clean interfaces, intuitive interactions, and the craft of making things feel right.</p>
+    
     <div class="hero__ctas">
       <button class="btn btn-primary" onclick="navigate('projects')"><i class="fa-solid fa-layer-group"></i> View Work</button>
       <button class="btn btn-outline" onclick="navigate('contact')"><i class="fa-regular fa-envelope"></i> Get in Touch</button>
     </div>
+
   </div>
   <div class="home-projects">
     <div class="section-label">Selected Work</div>
     <div class="proj-stack reveal">
+
       <!-- Sidéral -->
       <div class="proj-row" onclick="navigate('sideral')">
         <div class="proj-thumb"><img src="img/sideral.png" alt="Sideral website"></div>
+
         <div class="proj-body">
           <p class="proj-eyebrow live">Brand Website · Live</p>
           <h2 class="proj-title">Sidéral</h2>
           <p class="proj-desc">A luxury beauty brand site built from the ground up — cosmic visual identity, full storefront, shopping cart, and booking system. Vanilla HTML, CSS, and JavaScript.</p>
           <div class="proj-tags"><span class="proj-tag">UI Design</span><span class="proj-tag">HTML/CSS</span><span class="proj-tag">JavaScript</span><span class="proj-tag">E-Commerce</span></div>
         </div>
+
         <span class="proj-arrow">↗</span>
       </div>
+
       <!-- NJEM -->
       <div class="proj-row" onclick="navigate('njem')">
         <div class="proj-thumb"><img src="img/njem-hero.png" alt="NJEM website"></div>
+
         <div class="proj-body">
           <p class="proj-eyebrow live">Client Website · Live</p>
           <h2 class="proj-title">NJEM</h2>
           <p class="proj-desc">One-scroll artist website for electronic music producer &amp; DJ NJEM — custom audio player, video hero, booking form, and full EPK. Built in 5 weeks from research to launch.</p>
           <div class="proj-tags"><span class="proj-tag">UX Research</span><span class="proj-tag">UI Design</span><span class="proj-tag">HTML/CSS</span><span class="proj-tag">JavaScript</span></div>
         </div>
+
         <span class="proj-arrow">↗</span>
       </div>
+
       <!-- AI Airbnb -->
       <div class="proj-row" onclick="navigate('airbnb')" style="opacity:0.6;">
         <div class="proj-thumb">
           <div class="proj-thumb-icon" style="display:flex;align-items:center;justify-content:center;width:100%;height:100%;"><i class="fa-solid fa-house" style="font-size:2rem;color:rgba(99,140,255,0.15);"></i></div>
           <span class="wip-badge">In Dev</span>
         </div>
+
         <div class="proj-body">
           <p class="proj-eyebrow wip">AI Application · In Development</p>
           <h2 class="proj-title">AI Airbnb Finder</h2>
           <p class="proj-desc">An AI-powered app that surfaces personalized listings — moving beyond rigid filters to understand what a traveler actually wants through natural language.</p>
           <div class="proj-tags"><span class="proj-tag">AI</span><span class="proj-tag">Python</span><span class="proj-tag">Conversational UI</span></div>
         </div>
+
         <span class="proj-arrow">↗</span>
       </div>
     </div>
@@ -163,45 +180,54 @@
      PROJECTS
 ══════════════════════════════════════ -->
 <div id="page-projects" class="page">
+
   <header class="page-header">
     <p class="page-header__eyebrow">Work</p>
     <h1 class="page-header__title">Projects</h1>
     <div class="page-header__line"></div>
   </header>
+
   <div class="projects-wrap">
     <div class="section-label">Selected Work</div>
     <div class="proj-stack reveal">
       <div class="proj-row" onclick="navigate('sideral')">
         <div class="proj-thumb"><img src="img/sideral.png" alt="Sideral"></div>
+
         <div class="proj-body">
           <p class="proj-eyebrow live">Brand Website · Live</p>
           <h2 class="proj-title">Sidéral</h2>
           <p class="proj-desc">A luxury beauty brand site built from the ground up. Cosmic visual identity — berry, rose, and cream against deep charcoal — with a fully functional storefront, shopping cart, and booking system.</p>
           <div class="proj-tags"><span class="proj-tag">UI Design</span><span class="proj-tag">HTML/CSS</span><span class="proj-tag">JavaScript</span><span class="proj-tag">E-Commerce</span><span class="proj-tag">Figma</span></div>
         </div>
+        
         <span class="proj-arrow">↗</span>
       </div>
       <div class="proj-row" onclick="navigate('njem')">
         <div class="proj-thumb"><img src="img/njem-hero.png" alt="NJEM"></div>
+
         <div class="proj-body">
           <p class="proj-eyebrow live">Client Website · Live</p>
           <h2 class="proj-title">NJEM</h2>
           <p class="proj-desc">One-scroll artist website for electronic music producer and DJ NJEM. Custom audio player, fullscreen video hero, glitch title animation, booking form, and complete digital EPK. Research through launch in 5 weeks.</p>
           <div class="proj-tags"><span class="proj-tag">UX Research</span><span class="proj-tag">UI Design</span><span class="proj-tag">HTML/CSS</span><span class="proj-tag">JavaScript</span><span class="proj-tag">Client Work</span></div>
         </div>
+
         <span class="proj-arrow">↗</span>
       </div>
+
       <div class="proj-row" onclick="navigate('airbnb')" style="opacity:0.6;">
         <div class="proj-thumb">
           <div class="proj-thumb-icon" style="display:flex;align-items:center;justify-content:center;width:100%;height:100%;"><i class="fa-solid fa-house" style="font-size:2rem;color:rgba(99,140,255,0.15);"></i></div>
           <span class="wip-badge">In Dev</span>
         </div>
+
         <div class="proj-body">
           <p class="proj-eyebrow wip">AI Application · In Development</p>
           <h2 class="proj-title">AI Airbnb Finder</h2>
           <p class="proj-desc">An AI-powered application that analyzes Airbnb listing data to surface personalized recommendations — moving beyond basic filters to understand what a traveler actually wants.</p>
           <div class="proj-tags"><span class="proj-tag">AI</span><span class="proj-tag">Python</span><span class="proj-tag">Data Analysis</span><span class="proj-tag">Conversational UI</span></div>
         </div>
+
         <span class="proj-arrow">↗</span>
       </div>
     </div>
@@ -218,19 +244,23 @@
     <p class="cs-hero__eyebrow">Case Study &nbsp;·&nbsp; Brand Website &nbsp;·&nbsp; Live</p>
     <h1 class="cs-hero__title">Sidéral</h1>
     <p class="cs-hero__subtitle">A luxury beauty brand designed and built from scratch — where deep charcoal skies meet soft celestial warmth. Berry, rose, and cream come together to create something that feels like getting ready under a sky full of stars.</p>
+    
     <div class="cs-meta">
       <div class="cs-meta__item"><span class="cs-meta__label">Role</span><span class="cs-meta__value">Designer &amp; Developer</span></div>
       <div class="cs-meta__item"><span class="cs-meta__label">Type</span><span class="cs-meta__value">Brand Website</span></div>
       <div class="cs-meta__item"><span class="cs-meta__label">Status</span><span class="cs-meta__value">Live</span></div>
       <div class="cs-meta__item"><span class="cs-meta__label">Stack</span><span class="cs-meta__value">HTML · CSS · JS</span></div>
     </div>
+
     <div class="cs-btns">
       <a href="https://sozark.github.io/SideralWebsite/" target="_blank" rel="noopener" class="cs-btn cs-btn-fill"><i class="fa-solid fa-arrow-up-right-from-square"></i> View Live Site</a>
       <a href="https://www.figma.com/design/5y1CJf9xGA6QyKoujBmyaE/" target="_blank" rel="noopener" class="cs-btn cs-btn-out"><i class="fa-solid fa-pen-ruler"></i> Figma File</a>
     </div>
+
   </div>
   <div class="cs-banner reveal"><img src="img/sideral.png" alt="Sideral website" class="cs-banner-img"></div>
   <div class="cs-body">
+
     <div class="cs-section reveal">
       <p class="cs-section__label">01 — The Problem</p>
       <h2 class="cs-section__heading">Luxury beauty online feels either cold or forgettable</h2>
@@ -242,6 +272,7 @@
       <p class="cs-section__label">02 — Design Approach</p>
       <h2 class="cs-section__heading">Warm celestial — the softer side of the cosmos</h2>
       <p class="cs-section__body">The name Sidéral means "of the stars," but the interpretation was never cold or sci-fi. The design language draws from the warmest parts of the night sky — the rose blush of a nebula, the deep berry of a galaxy's core, the cream-soft glow of light through atmosphere.</p>
+      
       <div class="palette-row">
         <div class="swatch-wrap"><div class="swatch" style="background:#f5e0ef;"></div><div class="swatch-label">Cream</div></div>
         <div class="swatch-wrap"><div class="swatch" style="background:#e890be;"></div><div class="swatch-label">Rose</div></div>
@@ -250,9 +281,11 @@
         <div class="swatch-wrap"><div class="swatch" style="background:#0c0008;border:1px solid rgba(255,255,255,0.1);"></div><div class="swatch-label">Charcoal 1</div></div>
         <div class="swatch-wrap"><div class="swatch" style="background:#22001a;border:1px solid rgba(255,255,255,0.1);"></div><div class="swatch-label">Charcoal 4</div></div>
       </div>
+
       <p class="cs-section__body" style="margin-top:18px;">Typography reinforces the mood: Cormorant Garamond at 300 weight across headlines, Jost at 200 for body copy — airy, almost whispering. Together they give the brand a quality that feels both ancient and modern.</p>
       <div class="cs-tags"><span class="cs-tag">Visual Identity</span><span class="cs-tag">Color Theory</span><span class="cs-tag">Typography</span><span class="cs-tag">Design Systems</span><span class="cs-tag">Component Design</span><span class="cs-tag">Responsive Layout</span></div>
     </div>
+
     <div class="cs-section reveal">
       <p class="cs-section__label">03 — What I Built</p>
       <h2 class="cs-section__heading">A full brand experience with real functionality</h2>
@@ -263,13 +296,16 @@
         <div class="cs-outcome"><p class="cs-outcome__label">Feature</p><p class="cs-outcome__value">Booking System</p></div>
         <div class="cs-outcome"><p class="cs-outcome__label">Feature</p><p class="cs-outcome__value">Responsive Design</p></div>
       </div>
+
     </div>
+
     <div class="cs-section reveal">
       <p class="cs-section__label">04 — Outcome &amp; Reflection</p>
       <h2 class="cs-section__heading">What color temperature actually does to a user</h2>
       <p class="cs-section__body">Building Sidéral taught me something I apply to every project now: color temperature is emotional temperature. Swap a cold black for a charcoal with magenta undertones and the entire feeling of a page shifts — users lean in rather than pull back.</p>
       <p class="cs-section__body" style="margin-top:14px;">The palette, the gradient that drifts from cream to deep berry, the whisper-weight of Cormorant at 300 — none of it is accidental. It's all in service of one feeling: that this brand was made for you.</p>
     </div>
+
   </div>
   <footer class="site-footer">© 2025 Noah C. Jones &nbsp;·&nbsp; jonesncharbonnet.com</footer>
 </div>
@@ -283,6 +319,7 @@
     <p class="cs-hero__eyebrow">Case Study &nbsp;·&nbsp; Client Website &nbsp;·&nbsp; Live</p>
     <h1 class="cs-hero__title">NJEM</h1>
     <p class="cs-hero__subtitle">A one-scroll artist website for electronic music producer and DJ NJEM — built to land bookings, showcase original productions, and serve as a complete digital EPK for promoters and venue owners.</p>
+    
     <div class="cs-meta">
       <div class="cs-meta__item"><span class="cs-meta__label">Role</span><span class="cs-meta__value">Designer &amp; Developer</span></div>
       <div class="cs-meta__item"><span class="cs-meta__label">Client</span><span class="cs-meta__value">NJEM</span></div>
@@ -290,15 +327,19 @@
       <div class="cs-meta__item"><span class="cs-meta__label">Stack</span><span class="cs-meta__value">HTML · CSS · JS</span></div>
       <div class="cs-meta__item"><span class="cs-meta__label">Status</span><span class="cs-meta__value">Live</span></div>
     </div>
+
     <div class="cs-btns">
       <a href="https://njemhz.com" target="_blank" rel="noopener" class="cs-btn cs-btn-fill"><i class="fa-solid fa-arrow-up-right-from-square"></i> View Live Site</a>
       <a href="https://github.com/Sozark/NjemWebsite" target="_blank" rel="noopener" class="cs-btn cs-btn-out"><i class="fa-brands fa-github"></i> Repository</a>
     </div>
   </div>
+
   <div class="cs-banner reveal">
     <img src="img/njem-hero.png" alt="NJEM hero section" class="cs-banner-img">
   </div>
+
   <div class="cs-body">
+
     <div class="cs-section reveal">
       <p class="cs-section__label">01 — The Brief</p>
       <h2 class="cs-section__heading">A professional home for an artist who had none</h2>
@@ -306,10 +347,12 @@
       <p class="cs-section__body" style="margin-top:14px;">The brief required three things simultaneously: a professional booking portal, a place to showcase original productions inline, and a digital EPK that promoters could link to when pitching NJEM to venues.</p>
       <div class="cs-callout"><p>A promoter should be able to land on the site, hear the sound, understand the artist, and send a booking inquiry — without leaving the page or opening a second tab.</p></div>
     </div>
+
     <div class="cs-section reveal">
       <p class="cs-section__label">02 — User Research</p>
       <h2 class="cs-section__heading">Three methods. Two distinct audiences.</h2>
       <p class="cs-section__body">Research ran across a direct client interview, user surveys with fans and potential bookers in the electronic music space, and a competitor audit of established DJ and producer sites — Chris Lake, John Summit, and Peggy Gou.</p>
+
       <table class="cs-table" style="margin-top:20px;">
         <thead><tr><th>Finding</th><th>Design response</th></tr></thead>
         <tbody>
@@ -319,11 +362,13 @@
           <tr><td>Competitors buried booking 3+ clicks deep</td><td>Contact section reachable via sticky nav and CTA at scroll end</td></tr>
         </tbody>
       </table>
+
     </div>
     <div class="cs-section reveal">
       <p class="cs-section__label">03 — Ideation</p>
       <h2 class="cs-section__heading">One scroll. Six sections. No dead ends.</h2>
       <p class="cs-section__body">The single-page scroll structure was locked in early — every extra page was a potential drop-off. The six sections were sequenced as a narrative: hero establishes the artist, music proves it, about gives context, media adds visual evidence, services lays out what NJEM offers, and contact closes the loop.</p>
+      
       <div class="cs-outcomes" style="margin-top:16px;">
         <div class="cs-outcome"><p class="cs-outcome__label">01</p><p class="cs-outcome__value">Hero</p></div>
         <div class="cs-outcome"><p class="cs-outcome__label">02</p><p class="cs-outcome__value">Music</p></div>
@@ -332,11 +377,13 @@
         <div class="cs-outcome"><p class="cs-outcome__label">05</p><p class="cs-outcome__value">Services</p></div>
         <div class="cs-outcome"><p class="cs-outcome__label">06</p><p class="cs-outcome__value">Contact</p></div>
       </div>
+
     </div>
     <div class="cs-section reveal">
       <p class="cs-section__label">04 — Design System</p>
       <h2 class="cs-section__heading">Black. Cyan. One rule — no noise.</h2>
       <p class="cs-section__body">The visual language was built to mirror the environments NJEM performs in. Near-black backgrounds, a single electric cyan accent, with purple and pink appearing sparingly. The custom Homoarak typeface — loaded via @font-face, unavailable anywhere else — makes the brand immediately distinct from any template.</p>
+      
       <div class="njem-palette">
         <div class="njem-swatch"><div style="background:#060608;border:1px solid rgba(255,255,255,0.1);"></div><span>#060608</span></div>
         <div class="njem-swatch"><div style="background:#0c0c10;border:1px solid rgba(255,255,255,0.07);"></div><span>#0c0c10</span></div>
@@ -347,11 +394,13 @@
         <div class="njem-swatch"><div style="background:#f0f0f8;border:1px solid rgba(0,0,0,0.2);"></div><span>#f0f0f8</span></div>
         <div class="njem-swatch"><div style="background:#8888aa;"></div><span>#8888aa</span></div>
       </div>
+
     </div>
     <div class="cs-section reveal">
       <p class="cs-section__label">05 — Technical Build</p>
       <h2 class="cs-section__heading">Six features that required real engineering</h2>
       <p class="cs-section__body">Hi-fi prototypes in Figma translated the structure into the full visual language before code. The build introduced several technically ambitious features — each a direct response to a user research requirement.</p>
+
       <table class="cs-table" style="margin-top:16px;">
         <thead><tr><th>Feature</th><th>What it does</th></tr></thead>
         <tbody>
@@ -363,6 +412,7 @@
           <tr><td>Async contact form</td><td>Formspree API, no page reload — button transitions through sending/success/error states with color feedback</td></tr>
         </tbody>
       </table>
+
     </div>
     <div class="cs-section reveal">
       <p class="cs-section__label">06 — Featured Release</p>
@@ -370,17 +420,20 @@
       <p class="cs-section__body">The music section leads with <em>Proposed Utopia</em> — NJEM's 2025 EP, available inline across SoundCloud, YouTube, Bandcamp, and Apple Music. Six tracks playable without leaving the page.</p>
       <img src="img/njem-about.png" alt="NJEM about section" style="width:100%;border-radius:2px;border:1px solid var(--border);margin-top:16px;aspect-ratio:16/9;object-fit:cover;">
     </div>
+
     <div class="cs-section reveal">
       <p class="cs-section__label">07 — Outcome &amp; Reflection</p>
       <h2 class="cs-section__heading">From Instagram DMs to a complete artist platform</h2>
       <p class="cs-section__body">The NJEM site launched at njemhz.com in early June 2025. It's the first professional online presence the artist has had — a single destination that communicates who he is, what he sounds like, what he offers, and how to book him.</p>
       <p class="cs-section__body" style="margin-top:14px;">The most valuable lesson: building for a real client with a real voice makes every design decision more grounded. The dark visual language, the Homoarak font, the video hero — none of it came from a style reference. It came from understanding NJEM's world well enough to represent it on screen.</p>
+
       <div class="stat-row">
         <div class="stat-cell"><div class="stat-cell__number">5wk</div><div class="stat-cell__label">Timeline</div></div>
         <div class="stat-cell"><div class="stat-cell__number">1</div><div class="stat-cell__label">Scroll, full site</div></div>
         <div class="stat-cell"><div class="stat-cell__number">6</div><div class="stat-cell__label">Tracks inline</div></div>
         <div class="stat-cell"><div class="stat-cell__number">0</div><div class="stat-cell__label">External redirects</div></div>
       </div>
+
     </div>
   </div>
   <footer class="site-footer">© 2025 Noah C. Jones &nbsp;·&nbsp; jonesncharbonnet.com</footer>
@@ -395,29 +448,35 @@
     <p class="cs-hero__eyebrow">Case Study &nbsp;·&nbsp; AI Application &nbsp;·&nbsp; In Development</p>
     <h1 class="cs-hero__title">AI Airbnb Finder</h1>
     <p class="cs-hero__subtitle">An AI-powered application that analyzes Airbnb listing data to surface personalized recommendations — moving beyond basic filters to understand what a traveler actually wants.</p>
+    
     <div class="cs-meta">
       <div class="cs-meta__item"><span class="cs-meta__label">Role</span><span class="cs-meta__value">Designer &amp; Developer</span></div>
       <div class="cs-meta__item"><span class="cs-meta__label">Type</span><span class="cs-meta__value">AI Application</span></div>
       <div class="cs-meta__item"><span class="cs-meta__label">Status</span><span class="cs-meta__value">In Development</span></div>
       <div class="cs-meta__item"><span class="cs-meta__label">Stack</span><span class="cs-meta__value">Python · AI</span></div>
     </div>
+
   </div>
   <div class="cs-body">
+
     <div class="cs-section reveal">
       <p class="cs-section__label">01 — The Problem</p>
       <h2 class="cs-section__heading">Finding a good Airbnb takes too long</h2>
       <p class="cs-section__body">Airbnb's search filters are broad. But the things that actually make a stay great are harder to filter for: neighborhood vibe, host responsiveness, whether it's quiet at night. Travelers spend hours reading reviews trying to piece together what an algorithm should surface automatically.</p>
       <div class="cs-callout"><p>What if you could describe what you want in plain language and get listings that actually match — not just listings that fit the filters?</p></div>
     </div>
+
     <div class="cs-section reveal">
       <p class="cs-section__label">02 — Current Progress</p>
       <h2 class="cs-section__heading">Where the project stands</h2>
+
       <div class="cs-outcomes">
         <div class="cs-outcome"><p class="cs-outcome__label">Done</p><p class="cs-outcome__value">Problem Definition</p></div>
         <div class="cs-outcome"><p class="cs-outcome__label">Done</p><p class="cs-outcome__value">Data Research</p></div>
         <div class="cs-outcome"><p class="cs-outcome__label">In Progress</p><p class="cs-outcome__value">AI Pipeline</p></div>
         <div class="cs-outcome"><p class="cs-outcome__label">Upcoming</p><p class="cs-outcome__value">UI Build</p></div>
       </div>
+
     </div>
   </div>
   <footer class="site-footer">© 2025 Noah C. Jones &nbsp;·&nbsp; jonesncharbonnet.com</footer>
@@ -427,21 +486,26 @@
      ABOUT
 ══════════════════════════════════════ -->
 <div id="page-about" class="page">
+
   <header class="page-header">
     <p class="page-header__eyebrow">About</p>
     <h1 class="page-header__title">Noah C. Jones</h1>
     <p class="page-header__subtitle">Designer · Engineer · Creator</p>
     <div class="page-header__line"></div>
   </header>
+
   <div class="about-layout">
+
     <div class="about-card reveal">
       <p class="about-card__eyebrow">Bio</p>
       <p class="about-card__body">I'm a UX/UI designer and developer with a background in both graphic design and software engineering — which means I can take a product from early wireframes through to a shipped, working build. I care deeply about the details that make interfaces feel intuitive, and I've mentored teams through that process as much as I've built individually.</p>
       <p class="about-card__body">My work sits at the intersection of design systems thinking and technical execution. I'm most at home in cross-functional environments where design and engineering have to speak the same language — and I've spent a lot of time making sure I speak both fluently.</p>
     </div>
+
     <div class="about-card reveal">
       <p class="about-card__eyebrow">Skills &amp; Tools</p>
       <div class="skill-cat">Design</div>
+
       <div class="chips">
         <span class="chip hl">Figma</span>
         <span class="chip hl">UX/UI Design</span>
@@ -454,7 +518,9 @@
         <span class="chip">Adobe Creative Suite</span>
         <span class="chip">Motion Graphics</span>
       </div>
+
       <div class="skill-cat">Development</div>
+
       <div class="chips">
         <span class="chip hl">HTML / CSS</span>
         <span class="chip hl">JavaScript</span>
@@ -463,13 +529,16 @@
         <span class="chip">Python</span>
         <span class="chip">REST APIs</span>
       </div>
+
       <div class="skill-cat">Tools &amp; Process</div>
+
       <div class="chips">
         <span class="chip">Git / GitHub</span>
         <span class="chip">Agile / Scrum</span>
         <span class="chip">Unity</span>
         <span class="chip">Claude AI</span>
       </div>
+
     </div>
   </div>
   <footer class="site-footer">© 2025 Noah C. Jones &nbsp;·&nbsp; jonesncharbonnet.com</footer>
@@ -479,27 +548,33 @@
      CONTACT
 ══════════════════════════════════════ -->
 <div id="page-contact" class="page">
+
   <header class="page-header">
     <p class="page-header__eyebrow">Contact</p>
     <h1 class="page-header__title">Get in Touch</h1>
     <div class="page-header__line"></div>
   </header>
+
   <div class="contact-layout">
     <div class="contact-card reveal">
       <p class="contact-card__eyebrow">Send a message</p>
       <form class="form" id="contactForm">
+        
         <div class="form-field">
           <label for="c-name">Name</label>
           <input type="text" id="c-name" name="name" placeholder="Your name" required>
         </div>
+        
         <div class="form-field">
           <label for="c-email">Email</label>
           <input type="email" id="c-email" name="email" placeholder="your@email.com" required>
         </div>
+        
         <div class="form-field">
           <label for="c-message">Message</label>
           <textarea id="c-message" name="message" rows="6" placeholder="What would you like to discuss?" required></textarea>
         </div>
+
         <button type="submit" class="form-submit">Send Message</button>
       </form>
     </div>
@@ -511,27 +586,33 @@
      GITHUB
 ══════════════════════════════════════ -->
 <div id="page-github" class="page">
+
   <header class="page-header">
     <p class="page-header__eyebrow">Source</p>
     <h1 class="page-header__title">GitHub</h1>
     <div class="page-header__line"></div>
   </header>
+
   <div class="github-layout reveal">
     <div class="gh-card">
       <div class="gh-profile">
         <div class="gh-icon"><i class="fa-brands fa-github"></i></div>
+        
         <div>
           <p class="gh-label">Repository</p>
           <p class="gh-name">Sozark</p>
           <p class="gh-sub">github.com/Sozark</p>
         </div>
+
       </div>
     </div>
+
     <div class="gh-card" style="padding-top:24px;">
       <p class="gh-eyebrow">Source Code</p>
       <p class="gh-desc">Browse source code, projects, and experiments. All public work lives in the archive — from client builds to game jam entries and experiments.</p>
       <a href="https://github.com/Sozark" target="_blank" rel="noopener" class="gh-btn"><i class="fa-brands fa-github"></i> Open GitHub</a>
     </div>
+
   </div>
   <footer class="site-footer">© 2025 Noah C. Jones &nbsp;·&nbsp; jonesncharbonnet.com</footer>
 </div>
