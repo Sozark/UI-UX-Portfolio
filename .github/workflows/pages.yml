@@ -26,7 +26,11 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      # enablement turns Pages on via the API, so the repo does not need the
+      # Settings -> Pages source flipped by hand first.
       - uses: actions/configure-pages@v5
+        with:
+          enablement: true
 
       # Only work/ is uploaded, so work/CNAME lands at the site root and
       # claims work.noahcjones.dev. portfolio-final/ is not published.
