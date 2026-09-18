@@ -26,13 +26,21 @@ work/
 
 ## Deploying via GitHub Pages
 
-1. In repo settings → Pages, set the source to this branch with `/work` as
-   the publish directory (or move `work/` contents to the repo root of a
-   dedicated Pages branch if the host requires root-only publishing).
-2. Add a `CNAME` record at your DNS provider: `work` → `<username>.github.io`.
-3. GitHub Pages will pick up the `CNAME` file in this folder automatically
-   once it's the published root.
+Branch-based Pages can only publish from the repo root or `/docs`, never an
+arbitrary subdirectory, so this site deploys through GitHub Actions instead:
+`.github/workflows/pages.yml` uploads only `work/` as the Pages artifact.
 
-Images are currently pulled from the `Portfolio-Website` repo's raw GitHub
-URLs to avoid duplicating binary assets — swap in locally hosted copies
-under `work/img/` if you'd rather not depend on that repo staying public.
+1. Repo Settings → Pages → **Source: GitHub Actions**. This is a one-time
+   manual step; everything else is automated.
+2. Merge to `main`. The workflow runs on any push touching `work/`, and can
+   also be triggered by hand via *Run workflow*.
+3. Because only `work/` is uploaded, `work/CNAME` lands at the published
+   root and claims `work.noahcjones.dev`. `portfolio-final/` is never
+   published, so its `jonesncharbonnet.com` CNAME is inert.
+
+DNS is already in place: `*.noahcjones.dev` is a wildcard CNAME to
+`sozark.github.io`, which covers this subdomain. An explicit `work` →
+`sozark.github.io` record would be tidier but isn't required.
+
+Case study images are self-hosted under `work/img/`, so the site does not
+depend on the `Portfolio-Website` repo staying public.
