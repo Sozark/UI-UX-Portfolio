@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>StayFinder AI — Case Study — Noah C. Jones</title>
+<meta name="description" content="StayFinder AI: a conversational travel concierge that replaces filter fatigue with chat, live in production.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/style.css">
+<script>
+(function(){
+  try{
+    var t = localStorage.getItem('theme');
+    if(t === 'light' || t === 'dark'){ document.documentElement.setAttribute('data-theme', t); }
+  }catch(e){}
+})();
+</script>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav__row">
+    <a href="index.html" class="nav__logo">Noah C. Jones <span>·</span> UX Design</a>
+    <ul class="nav__links">
+      <li><a href="index.html" class="active">Work</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav__actions">
+      <a href="contact.html" class="nav__cta">Let's talk</a>
+      <button class="theme-toggle" data-theme-toggle type="button" aria-label="Switch to dark mode" aria-pressed="false">
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+      </button>
+      <button class="nav__toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+  <div class="nav__mobile">
+    <a href="index.html">Work</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</nav>
+
+<div class="wrap">
+  <a href="index.html" class="cs-back">← Back to work</a>
+
+  <div class="cs-hero">
+    <p class="cs-hero__eyebrow">AI Application · Live Product</p>
+    <h1 class="cs-hero__title">StayFinder AI</h1>
+    <p class="cs-hero__lede">
+      An AI travel concierge built around a simple bet: the more options a
+      filter-based search surfaces, the harder it becomes to actually choose
+      one. StayFinder replaces the filter panel with a conversation, then
+      finds live Airbnb and hotel listings, drops them on a map, and lets you
+      compare your favorites side-by-side.
+    </p>
+
+    <div class="cs-meta">
+      <div><p class="cs-meta__label">Role</p><p class="cs-meta__value">Designer &amp; Developer</p></div>
+      <div><p class="cs-meta__label">Platform</p><p class="cs-meta__value">Web App (PWA)</p></div>
+      <div><p class="cs-meta__label">Stack</p><p class="cs-meta__value">JavaScript · Claude API · Vercel</p></div>
+      <div><p class="cs-meta__label">Status</p><p class="cs-meta__value">Live</p></div>
+    </div>
+
+    <div class="cs-actions">
+      <a href="https://getstayfinder.vercel.app" class="btn btn--primary" target="_blank" rel="noopener">View live site</a>
+      <a href="https://github.com/Sozark/StayFinder" class="btn btn--ghost" target="_blank" rel="noopener">View repository</a>
+    </div>
+  </div>
+
+  <div class="cs-media">
+    <img src="img/stayfinder.png" alt="StayFinder AI interface">
+  </div>
+</div>
+
+<div class="cs-body">
+  <div class="wrap">
+
+    <div class="cs-section">
+      <p class="cs-section__label">01 — The Problem</p>
+      <h2 class="cs-section__title">More filters don't mean a better decision</h2>
+      <p class="cs-section__body">
+        There's a well-documented effect in decision psychology called choice
+        overload — past a certain point, adding more options doesn't make
+        people more satisfied with their decision, it makes them less
+        confident in it and more likely to second-guess or abandon it
+        entirely. Booking sites are built almost in defiance of that finding:
+        location, price, dates, guests, amenities, cancellation policy, host
+        rating, and on and on, each filter narrowing the list while widening
+        the mental load of the person using it.
+      </p>
+      <p class="cs-section__body">
+        Nobody plans a trip by thinking in checkboxes. You think in a
+        sentence — "somewhere walkable to the beach, pet-friendly, under
+        $200 a night, room for the dog" — and then you spend twenty minutes
+        translating that sentence into a form. StayFinder skips the
+        translation step.
+      </p>
+      <div class="cs-pull">If more filters make people less confident in their choice, why is filtering still the default interface for booking a trip?</div>
+    </div>
+
+    <div class="cs-section">
+      <p class="cs-section__label">02 — Design Approach</p>
+      <h2 class="cs-section__title">Conversation as the interface</h2>
+      <p class="cs-section__body">
+        The core interaction is a chat with Claude that asks the right
+        follow-up questions — destination, dates, guests, budget, vibe — and
+        searches real listings once it has enough to work with. The design
+        challenge wasn't the chat itself; it was making an AI-driven flow feel
+        trustworthy and legible rather than like a black box.
+      </p>
+      <p class="cs-section__body">
+        A live preference sidebar solves that. As the conversation progresses,
+        a running summary fills in — destination, dates, budget, amenities —
+        so the user always sees exactly what the AI understood, with a
+        progress bar toward "ready to search." Results land on an interactive
+        map with clickable pins, and any two or three listings can be pulled
+        into a side-by-side comparison table with best-price and top-rated
+        call-outs.
+      </p>
+    </div>
+
+    <div class="cs-section">
+      <p class="cs-section__label">03 — What Shipping Taught Me</p>
+      <h2 class="cs-section__title">The chat UI was the easy part</h2>
+      <p class="cs-section__body">
+        The interesting growth on this project happened underneath the
+        interface, rewriting decisions I'd made too quickly the first time
+        through. My first version called the Anthropic API directly from the
+        browser with the key sitting in localStorage — fine for a demo,
+        unshippable for real people. I rebuilt the whole request flow behind
+        a Vercel Edge Function so the key never leaves the server, and moved
+        off regex-parsed <code>&lt;TAGS&gt;</code> in plain text onto
+        structured Claude tool calls, so the model returns typed, reliable
+        data instead of me hoping its output matches a pattern.
+      </p>
+      <div class="cs-outcomes">
+        <div class="cs-outcome"><p class="cs-outcome__label">Security</p><p class="cs-outcome__value">Server-Side Proxy</p></div>
+        <div class="cs-outcome"><p class="cs-outcome__label">Reliability</p><p class="cs-outcome__value">Structured Tool Calls</p></div>
+        <div class="cs-outcome"><p class="cs-outcome__label">Design System</p><p class="cs-outcome__value">Figma Token Sync</p></div>
+        <div class="cs-outcome"><p class="cs-outcome__label">Resilience</p><p class="cs-outcome__value">Graceful Demo Fallback</p></div>
+        <div class="cs-outcome"><p class="cs-outcome__label">Abuse Protection</p><p class="cs-outcome__value">Rate Limiting, Fail-Open</p></div>
+        <div class="cs-outcome"><p class="cs-outcome__label">Product Ethics</p><p class="cs-outcome__value">No Fake Booking Flow</p></div>
+      </div>
+      <p class="cs-section__body">
+        Before the link went public, I added per-IP rate limiting at the edge
+        and a hard monthly spend cap — the cap exists specifically as a
+        backstop in case the rate limiter itself ever fails. And when it does
+        fail, it fails <em>open</em>: a Redis hiccup degrades to an
+        unthrottled request rather than taking the whole app down. That's a
+        deliberate tradeoff between cost protection and availability, not an
+        oversight.
+      </p>
+      <p class="cs-section__body">
+        I also learned that owning a mistake is part of the job. An early
+        commit accidentally hardcoded a live Mapbox token directly in
+        client-side code. Instead of quietly fixing it, I documented the
+        token as burned in the deployment notes, rotated it, and wrote down
+        why — so the next credential doesn't end up in a commit either.
+      </p>
+      <p class="cs-section__body">
+        The most deliberate decision in the whole app might be the smallest
+        one: there's no "Book Now" button. Real booking requires
+        affiliate-level API access I don't have yet, so rather than fake a
+        booking flow that can't actually confirm a reservation, every listing
+        links out to a real search on Airbnb or Booking.com. It's a permanent
+        product decision, not a launch-week shortcut — an AI product should
+        never let a confident-sounding interface promise something it can't
+        back up.
+      </p>
+    </div>
+
+    <div class="cs-section">
+      <p class="cs-section__label">04 — Outcome &amp; Reflection</p>
+      <h2 class="cs-section__title">A live product, not a portfolio piece</h2>
+      <p class="cs-section__body">
+        StayFinder is deployed and usable today, not a mockup sitting in a
+        design file. That distinction mattered to me — it's one thing to
+        design a flow, another to see it survive contact with a real API,
+        real network conditions, and real edge cases. Getting it from "looks
+        right in Figma" to "works when someone else opens the link" was the
+        actual project.
+      </p>
+      <p class="cs-section__body">
+        The goal was to make vacation planning feel less like a second job —
+        for someone booking their first trip or their fiftieth. It's still
+        evolving, and the repo is public if you want to see exactly how it's
+        built.
+      </p>
+    </div>
+
+  </div>
+</div>
+
+<div class="cs-next">
+  <div class="wrap">
+    <p class="cs-next__label">Next case study</p>
+    <h2 class="cs-next__title">NJEM</h2>
+    <a href="case-study-njem.html" class="cs-next__link">View case study →</a>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__row">
+      <p class="footer__name">Noah C. Jones</p>
+      <div class="footer__links">
+        <a href="index.html">Work</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

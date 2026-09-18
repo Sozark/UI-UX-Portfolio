@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>About — Noah C. Jones</title>
+<meta name="description" content="About Noah C. Jones — UX/Product Designer and Design Engineer with a B.S. in Computer Science from LSU.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/style.css">
+<script>
+(function(){
+  try{
+    var t = localStorage.getItem('theme');
+    if(t === 'light' || t === 'dark'){ document.documentElement.setAttribute('data-theme', t); }
+  }catch(e){}
+})();
+</script>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav__row">
+    <a href="index.html" class="nav__logo">Noah C. Jones <span>·</span> UX Design</a>
+    <ul class="nav__links">
+      <li><a href="index.html">Work</a></li>
+      <li><a href="about.html" class="active">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav__actions">
+      <a href="contact.html" class="nav__cta">Let's talk</a>
+      <button class="theme-toggle" data-theme-toggle type="button" aria-label="Switch to dark mode" aria-pressed="false">
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+      </button>
+      <button class="nav__toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+  <div class="nav__mobile">
+    <a href="index.html">Work</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</nav>
+
+<header class="page-hero">
+  <div class="wrap">
+    <p class="page-hero__eyebrow">About</p>
+    <h1 class="page-hero__title">Design and engineering aren't two jobs.</h1>
+    <p class="page-hero__lede">
+      Most designers hand off to engineers. Most engineers hand off to designers.
+      I do both — from UX research and Figma systems through to production-deployed
+      code. Every project in this portfolio went through that full arc.
+    </p>
+  </div>
+</header>
+
+<section class="section">
+  <div class="wrap">
+    <div class="two-col">
+      <div class="prose">
+        <p>
+          I have a B.S. in Computer Science from LSU with a minor in Digital Media
+          Arts &amp; Engineering, and a deep commitment to WCAG/ADA compliance —
+          not as a requirement, but as a design standard. Tempo Trails, an
+          accessibility-first rhythm game for children with autism, was usability
+          tested with real users ages 5–8 and built around a "no failure states"
+          principle from the first design decision.
+        </p>
+        <p>
+          As an independent design engineer, I run client projects end-to-end:
+          UX research, AI-assisted design workflows, Figma systems, and
+          production front-end code — alongside shipped work like StayFinder AI,
+          NJEM, and Bubble Hero, which won 1st place for Best Overall Game at a
+          Global Game Jam.
+        </p>
+        <p>
+          I'm targeting Design Engineer, UX Engineer, and Product Designer roles
+          where design and implementation aren't two separate jobs — they're
+          one. What motivates the work is building digital products that serve
+          every member of a community equally, including the users most
+          portfolios never think to test with.
+        </p>
+        <div class="mt-lg">
+          <a href="https://noahcjones.dev/resume/Noah_C_Jones_Resume.pdf" class="btn btn--primary" target="_blank" rel="noopener">Download résumé (PDF)</a>
+        </div>
+      </div>
+
+      <div>
+        <p class="section__eyebrow">Quick facts</p>
+        <div class="facts">
+          <div class="fact"><span class="fact__label">Education</span><span>B.S. Computer Science, LSU</span></div>
+          <div class="fact"><span class="fact__label">Focus</span><span>UX Research · Accessibility · Design Systems</span></div>
+          <div class="fact"><span class="fact__label">Standard</span><span>WCAG 2.1 AA/AAA</span></div>
+          <div class="fact"><span class="fact__label">Stack</span><span>React · HTML/CSS/JS · Figma</span></div>
+          <div class="fact"><span class="fact__label">Notable</span><span>1st Place, Global Game Jam</span></div>
+          <div class="fact"><span class="fact__label">Seeking</span><span>Design Engineer / UX Engineer / Product Designer</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--alt">
+  <div class="wrap">
+    <div class="section__head">
+      <p class="section__eyebrow">Toolkit</p>
+      <h2 class="section__title">Skills &amp; tools</h2>
+    </div>
+
+    <p class="section__eyebrow" style="margin-top:8px;">Research &amp; Design</p>
+    <div class="tag-cloud">
+      <span class="pill">User Research</span>
+      <span class="pill">Usability Testing</span>
+      <span class="pill">Figma / FigJam</span>
+      <span class="pill">Design Systems</span>
+      <span class="pill">Information Architecture</span>
+      <span class="pill">Prototyping</span>
+      <span class="pill">WCAG 2.1 AA/AAA</span>
+      <span class="pill">ADA / 508 Compliance</span>
+      <span class="pill">Inclusive Design</span>
+    </div>
+
+    <p class="section__eyebrow" style="margin-top:40px;">Engineering</p>
+    <div class="tag-cloud">
+      <span class="pill">React</span>
+      <span class="pill">HTML / CSS</span>
+      <span class="pill">JavaScript / TypeScript</span>
+      <span class="pill">Node.js</span>
+      <span class="pill">ASP.NET Core</span>
+      <span class="pill">Python</span>
+      <span class="pill">C# / C++</span>
+      <span class="pill">REST APIs</span>
+      <span class="pill">CI/CD Pipelines</span>
+      <span class="pill">Git / GitHub</span>
+    </div>
+
+    <p class="section__eyebrow" style="margin-top:40px;">Platforms &amp; AI</p>
+    <div class="tag-cloud">
+      <span class="pill">WordPress</span>
+      <span class="pill">SharePoint</span>
+      <span class="pill">Notion</span>
+      <span class="pill">Agile / Scrum</span>
+      <span class="pill">AI-Assisted Design Workflows</span>
+      <span class="pill">Prompt Engineering</span>
+      <span class="pill">Claude API</span>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__row">
+      <p class="footer__name">Noah C. Jones</p>
+      <div class="footer__links">
+        <a href="index.html">Work</a>
+        <a href="contact.html">Contact</a>
+        <a href="https://noahcjones.dev" target="_blank" rel="noopener">Full Portfolio ↗</a>
+        <a href="https://github.com/Sozark" target="_blank" rel="noopener">GitHub ↗</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Contact — Noah C. Jones</title>
+<meta name="description" content="Get in touch with Noah C. Jones about UX, product design, and design engineering roles.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/style.css">
+<script>
+(function(){
+  try{
+    var t = localStorage.getItem('theme');
+    if(t === 'light' || t === 'dark'){ document.documentElement.setAttribute('data-theme', t); }
+  }catch(e){}
+})();
+</script>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav__row">
+    <a href="index.html" class="nav__logo">Noah C. Jones <span>·</span> UX Design</a>
+    <ul class="nav__links">
+      <li><a href="index.html">Work</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+    <div class="nav__actions">
+      <a href="contact.html" class="nav__cta">Let's talk</a>
+      <button class="theme-toggle" data-theme-toggle type="button" aria-label="Switch to dark mode" aria-pressed="false">
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+      </button>
+      <button class="nav__toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+  <div class="nav__mobile">
+    <a href="index.html">Work</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</nav>
+
+<header class="page-hero">
+  <div class="wrap">
+    <p class="page-hero__eyebrow">Contact</p>
+    <h1 class="page-hero__title">Let's talk about the role.</h1>
+    <p class="page-hero__lede">
+      Open to Design Engineer, UX Engineer, and Product Designer roles —
+      remote or on-site. The fastest way to reach me is email.
+    </p>
+  </div>
+</header>
+
+<section class="section">
+  <div class="wrap">
+    <div class="contact-card">
+      <div class="contact-row">
+        <div>
+          <p class="contact-row__label">Email</p>
+          <p class="contact-row__value">jonesncharbonnet@gmail.com</p>
+        </div>
+        <a href="mailto:jonesncharbonnet@gmail.com" class="btn btn--primary">Email me</a>
+      </div>
+      <div class="contact-row">
+        <div>
+          <p class="contact-row__label">Résumé</p>
+          <p class="contact-row__value">Current PDF, updated regularly</p>
+        </div>
+        <a href="https://noahcjones.dev/resume/Noah_C_Jones_Resume.pdf" class="btn btn--ghost" target="_blank" rel="noopener">Download</a>
+      </div>
+      <div class="contact-row">
+        <div>
+          <p class="contact-row__label">GitHub</p>
+          <p class="contact-row__value">github.com/Sozark</p>
+        </div>
+        <a href="https://github.com/Sozark" class="btn btn--ghost" target="_blank" rel="noopener">View</a>
+      </div>
+      <div class="contact-row">
+        <div>
+          <p class="contact-row__label">Full Portfolio</p>
+          <p class="contact-row__value">noahcjones.dev — art, music, 3D, games</p>
+        </div>
+        <a href="https://noahcjones.dev" class="btn btn--ghost" target="_blank" rel="noopener">Visit</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__row">
+      <p class="footer__name">Noah C. Jones</p>
+      <div class="footer__links">
+        <a href="index.html">Work</a>
+        <a href="about.html">About</a>
+        <a href="https://noahcjones.dev" target="_blank" rel="noopener">Full Portfolio ↗</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

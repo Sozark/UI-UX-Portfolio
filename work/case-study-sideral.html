@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Sidéral — Case Study — Noah C. Jones</title>
+<meta name="description" content="Sidéral: a luxury beauty brand website built from scratch with a full storefront and booking system.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/style.css">
+<script>
+(function(){
+  try{
+    var t = localStorage.getItem('theme');
+    if(t === 'light' || t === 'dark'){ document.documentElement.setAttribute('data-theme', t); }
+  }catch(e){}
+})();
+</script>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav__row">
+    <a href="index.html" class="nav__logo">Noah C. Jones <span>·</span> UX Design</a>
+    <ul class="nav__links">
+      <li><a href="index.html" class="active">Work</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav__actions">
+      <a href="contact.html" class="nav__cta">Let's talk</a>
+      <button class="theme-toggle" data-theme-toggle type="button" aria-label="Switch to dark mode" aria-pressed="false">
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+      </button>
+      <button class="nav__toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+  <div class="nav__mobile">
+    <a href="index.html">Work</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</nav>
+
+<div class="wrap">
+  <a href="index.html" class="cs-back">← Back to work</a>
+
+  <div class="cs-hero">
+    <p class="cs-hero__eyebrow">Brand Website · Live</p>
+    <h1 class="cs-hero__title">Sidéral</h1>
+    <p class="cs-hero__lede">
+      A luxury beauty brand site designed and built from scratch — combining
+      a cosmic visual identity of deep purples and soft pinks with a fully
+      functional storefront and booking experience.
+    </p>
+
+    <div class="cs-meta">
+      <div><p class="cs-meta__label">Role</p><p class="cs-meta__value">Designer &amp; Developer</p></div>
+      <div><p class="cs-meta__label">Type</p><p class="cs-meta__value">Brand Website</p></div>
+      <div><p class="cs-meta__label">Stack</p><p class="cs-meta__value">HTML · CSS · JavaScript</p></div>
+      <div><p class="cs-meta__label">Status</p><p class="cs-meta__value">Live</p></div>
+    </div>
+
+    <div class="cs-actions">
+      <a href="https://sozark.github.io/SideralWebsite/" class="btn btn--primary" target="_blank" rel="noopener">View live site</a>
+      <a href="https://www.figma.com/design/5y1CJf9xGA6QyKoujBmyaE/Sid%C3%A9ral---Design-System" class="btn btn--ghost" target="_blank" rel="noopener">View Figma file</a>
+    </div>
+  </div>
+
+  <div class="cs-media">
+    <img src="img/sideral.png" alt="Sidéral website">
+  </div>
+</div>
+
+<div class="cs-body">
+  <div class="wrap">
+
+    <div class="cs-section">
+      <p class="cs-section__label">01 — The Problem</p>
+      <h2 class="cs-section__title">Luxury beauty brands feel cold online</h2>
+      <p class="cs-section__body">
+        Most luxury beauty websites prioritize minimalism to the point of
+        feeling sterile and distant. They look expensive but don't feel
+        immersive or personal. The challenge was to create something that
+        felt premium and high-end while also pulling the user into a world —
+        a brand experience, not just a storefront.
+      </p>
+      <div class="cs-pull">How do you make a beauty brand feel like an experience rather than a transaction?</div>
+    </div>
+
+    <div class="cs-section">
+      <p class="cs-section__label">02 — Design Approach</p>
+      <h2 class="cs-section__title">A cosmic identity built around atmosphere</h2>
+      <p class="cs-section__body">
+        The name Sidéral — meaning "of the stars" — drove every design
+        decision. Deep space colors, celestial imagery, and dark backgrounds
+        create an atmosphere that feels otherworldly and aspirational without
+        losing approachability. The goal was a brand that a user could get
+        lost in.
+      </p>
+      <p class="cs-section__body">
+        Typography was chosen to balance elegance with legibility across
+        product listings and booking flows. Color contrast was carefully
+        maintained throughout to ensure the dark palette never compromised
+        readability.
+      </p>
+    </div>
+
+    <div class="cs-section">
+      <p class="cs-section__label">03 — What I Built</p>
+      <h2 class="cs-section__title">A full brand site with real functionality</h2>
+      <p class="cs-section__body">
+        Sidéral isn't just a landing page — it's a complete brand experience
+        with multiple interconnected systems built in vanilla HTML, CSS, and
+        JavaScript.
+      </p>
+      <div class="cs-outcomes">
+        <div class="cs-outcome"><p class="cs-outcome__label">Feature</p><p class="cs-outcome__value">Product Storefront</p></div>
+        <div class="cs-outcome"><p class="cs-outcome__label">Feature</p><p class="cs-outcome__value">Shopping Cart</p></div>
+        <div class="cs-outcome"><p class="cs-outcome__label">Feature</p><p class="cs-outcome__value">Booking System</p></div>
+        <div class="cs-outcome"><p class="cs-outcome__label">Feature</p><p class="cs-outcome__value">Responsive Design</p></div>
+      </div>
+      <p class="cs-section__body">
+        Building the shopping cart and booking system without a framework
+        required careful state management in vanilla JavaScript — tracking
+        cart items, quantities, and session data entirely through the DOM
+        and localStorage.
+      </p>
+    </div>
+
+    <div class="cs-section">
+      <p class="cs-section__label">04 — Outcome &amp; Reflection</p>
+      <h2 class="cs-section__title">What I learned building this</h2>
+      <p class="cs-section__body">
+        Sidéral taught me how much visual identity drives user trust. Small
+        decisions — the weight of a heading, the spacing between product
+        cards, the timing of a hover animation — compound into a feeling that
+        either earns a user's attention or loses it. This project sharpened
+        my eye for that gap between a site that looks designed and one that
+        feels designed.
+      </p>
+    </div>
+
+  </div>
+</div>
+
+<div class="cs-next">
+  <div class="wrap">
+    <p class="cs-next__label">Next case study</p>
+    <h2 class="cs-next__title">Tempo Trails</h2>
+    <a href="case-study-tempo-trails.html" class="cs-next__link">View case study →</a>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__row">
+      <p class="footer__name">Noah C. Jones</p>
+      <div class="footer__links">
+        <a href="index.html">Work</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
