@@ -71,11 +71,10 @@ ul{ margin: 0; padding: 0; list-style: none; }
 /* ---------- Nav ---------- */
 .nav{
   position: sticky; top: 0; z-index: 50;
-  background: rgba(251,250,248,0.88);
+  background: color-mix(in srgb, var(--bg) 88%, transparent);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--line);
 }
-:root[data-theme="dark"] .nav, @media (prefers-color-scheme: dark){ }
 .nav__row{
   display: flex; align-items: center; justify-content: space-between;
   padding: 18px 32px; max-width: var(--max); margin: 0 auto;
